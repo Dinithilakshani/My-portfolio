@@ -387,58 +387,144 @@ span{
 
 
 
-  @media (max-width: 1024px) {
-    .home {
-      flex-direction: column;
+  @media (max-width: 1200px) {
+    html{
+        font-size: 55%;
     }
-  
-    .about {
-      flex-direction: column;
-    }
-  
-    .projects .project-card {
-      width: 45%;
-    }
+    
+    
   }
-  
-  @media (max-width: 768px) {
-    .header .navbar a {
-      font-size: 0.9rem;
+@media (max-width: 991px) {
+    .header{
+        padding: 2rem 3%;
     }
-  
-    .projects .project-card {
-      width: 100%;
+    section{
+        padding: 10rem 3% 2rem;
     }
-  
-    .about-content {
-      text-align: center;
+    .projects{
+        padding-bottom: 7rem;
     }
+      
+
+    
+}
+
+@media (max-width: 768px) {
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0; 
+        color: var(--text-color);
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    section{
+        padding: 10rem 3% 2rem;
+    }
+
+    /* section{
+        padding: 2rem 3%;
+    } */
+
+    
+
+    .about img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+  .projects{
+    margin-top: 3rem;
   }
-  
-  @media (max-width: 425px) {
-    .header {
-      flex-direction: column;
-      text-align: center;
+}
+
+
+@media (max-width: 617px){
+    .projects{
+        grid-template-columns:  repeat(1fr );
     }
-  
-    .header .navbar {
-      margin-top: 10px;
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
     }
-  
-    .home {
-      text-align: center;
+}
+
+@media (max-width: 365px){
+    .home-img img{
+        width: 90vw;
+    }   
+
+    .about-img img{
+        width: 90vw;
     }
-  
-    .home-content {
-      margin-bottom: 20px;
+}
+
+ 
+
+
+
+
+
+    
+   
+
+    
+
+    
+    
+
+
+@media (max-width: 617px){
+    .projects{
+        grid-template-columns: 1fr;
     }
-  
-    .contact .input-box {
-      flex-direction: column;
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
     }
-  
-    .contact .input-box input {
-      width: 100%;
-      margin-bottom: 10px;
+}
+
+@media (max-width: 365px){
+    .home-img img{
+        width: 90vw;
+    }   
+
+    .about-img img{
+        width: 90vw;
     }
-  }
+} 
