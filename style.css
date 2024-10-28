@@ -98,11 +98,14 @@ section{
     align-items: center;
     
 }
+.home-content{
+    width: 50vw;
+}
 
 .home-img img{
     width: 35vw;
     animation: floatImage 4s ease-in-out infinite;
-    margin-left: 64%;
+    /* margin-left: 64%; */
 }
 
 @keyframes floatImage{
@@ -243,6 +246,55 @@ span{
   .rounded {
     border-radius: 30%; /* Applies rounded borders */
   }
+  .Skills .container{
+    background: rgba(206, 160, 11, 0.24);
+    color: var(--text-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-top: 6%;
+}
+
+.Skills .container .row{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    flex-wrap: wrap;
+    gap: 1.8rem;
+   
+}
+
+.Skills .container .bar{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px var(--main-color);
+    background: var(--bg-color);
+    transition: 0.3s ease;
+    cursor: pointer;
+
+}
+
+.Skills .container .bar:hover{
+    box-shadow: 0 4px 20px var(--main-color);
+    transform: scale(1.03);
+}
+
+.Skills .container .bar .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  
+}
+
+.Skills .container .bar .info span{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    color: rgb(255, 255, 255);
+}
 
 
 .projects-box{
@@ -383,36 +435,60 @@ span{
   .social-image a img {
     animation: bounce 2s ease infinite;
   }
-  
 
-
-
-  @media (max-width: 1200px) {
+  @media (max-width: 1200px){
     html{
         font-size: 55%;
     }
-    
-    
-  }
-@media (max-width: 991px) {
+}
+  
+
+  @media (max-width: 991px){
     .header{
         padding: 2rem 3%;
     }
+
     section{
         padding: 10rem 3% 2rem;
     }
-    .projects{
-        padding-bottom: 7rem;
-    }
-      
 
-    
+    .Skills .container .row{
+        grid-template-columns: repeat(3, 2fr);
+    }
+
+
+    .contact{
+        min-height: auto;
+        padding: 50px;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .container .contactInfo,
+    .container .contactForm{
+        width: 100%;
+    }
+
+    .container .contactForm{
+        padding: 40px;
+    }
+
+    .container .contactForm form{
+        padding: 10px;
+    }
+
+    .footer{
+        padding: 2rem 3%;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px){
     #menu-icon{
         display: block;
     }
+
     .navbar{
         position: absolute;
         top: 100%;
@@ -424,6 +500,7 @@ span{
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         display: none;
     }
+
     .navbar.active{
         display: block;
     }
@@ -434,9 +511,16 @@ span{
         margin: 3rem 0; 
         color: var(--text-color);
     }
+
     .home{
         flex-direction: column;
     }
+    .home-content{
+        text-align: left;
+        margin-left: 0;
+        width: 90vw;
+    }
+
     .home-content h3{
         font-size: 2.6rem;
     }
@@ -450,35 +534,35 @@ span{
         margin-top: 4rem;
     }
 
-    section{
-        padding: 10rem 3% 2rem;
+    .about{
+        flex-direction: column-reverse;
     }
-
-    /* section{
-        padding: 2rem 3%;
-    } */
-
-    
 
     .about img{
         width: 70vw;
         margin-top: 4rem;
     }
-  .projects{
-    margin-top: 3rem;
-  }
+
+    .contact form{
+        width: 90%;
+    }
 }
 
-
 @media (max-width: 617px){
-    .projects{
-        grid-template-columns:  repeat(1fr );
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+    .Skills .container .row{
+        grid-template-columns: repeat(2, 2fr);
     }
 }
 
 @media (max-width: 450px){
     html{
         font-size: 50%;
+    }
+    .Skills .container .row{
+        grid-template-columns: repeat(2, 2fr);
     }
 }
 
@@ -491,6 +575,9 @@ span{
         width: 90vw;
     }
 }
+
+
+
 
  
 
@@ -506,25 +593,3 @@ span{
     
     
 
-
-@media (max-width: 617px){
-    .projects{
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 450px){
-    html{
-        font-size: 50%;
-    }
-}
-
-@media (max-width: 365px){
-    .home-img img{
-        width: 90vw;
-    }   
-
-    .about-img img{
-        width: 90vw;
-    }
-} 
